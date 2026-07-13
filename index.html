@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            background-color: #000000; /* Noir absolu / Vanta */
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container { text-align: center; }
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #333; }
+        p { color: #222; font-size: 1.2rem; }
+        /* Zone secrète invisible à l'œil nu mais présente dans le DOM */
+        #vanta-gateway {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404 Not Found</h1>
+        <p>The requested URL was not found on this server.</p>
+    </div>
+
+    <!-- 
+        PROTOCÒLE VANTA 4040 - PHASE 1
+        La clé est dans le noir. 
+        INDICE : Cherchez la fonction d'initialisation dans la console du navigateur.
+    -->
+
+    <script>
+        // Message caché dans la console de développement
+        console.log("%c[VANTA 4040] : Vous regardez là où les autres s'arrêtent.", "color: #ff0000; font-weight: bold; font-size: 14px;");
+        console.log("Exécutez la fonction vantaInit() pour ouvrir la brèche.");
+
+        function vantaInit() {
+            console.log("Vérification des droits...");
+            setTimeout(() => {
+                alert("ACCÈS AUTORISÉ. Téléchargement du fichier source : vanta_shadow.png");
+                // Redirection ou action vers l'étape 2 (Exemple : téléchargement de l'image)
+                window.location.href = "https://picsum.photos/500/500"; // Remplace par le lien de ton image stéganographiée
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
